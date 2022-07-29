@@ -24,7 +24,7 @@ T abs(T x) {
 
 // factorial function
 int factorial(int n) {
-    if (n < 0) throw std::invalid_argument("std::invalid_argument: ponsas::factorial only takes non-negative integer values.")
+    if (n < 0) throw std::invalid_argument("std::invalid_argument: ponsas::factorial only takes non-negative integer values.");
     return n == 0 ? 1 : n * factorial(n - 1);
 }
 
