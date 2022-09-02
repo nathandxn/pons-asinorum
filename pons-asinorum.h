@@ -9,6 +9,8 @@ namespace ponsas {
 
 const double PI = 3.141592653589793;
 
+typedef double (*svfunc)(double);
+
 template <typename T>
 T abs(T x);
 int factorial(int n);
