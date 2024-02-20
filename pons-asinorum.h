@@ -22,9 +22,8 @@ void quadroots(double a, double b, double c, double &x1, double &x2);
 // templated absolute value function or |x|
 template <typename T>
 T sign(T x) {
-    x < 0 ? return -1 : return 1;
+    return x < 0 ? -1 : 1;
 }
-
 
 template <typename T>
 T abs(T x) {
@@ -50,6 +49,12 @@ double newton_sqroot(double a, double x, double tolerance) {
     }
     return x;
     
+}
+
+void quadroots(double a, double b, double c, double &x1, double &x2) {
+
+    double d = b*b - 4.0*a*c;
+    if (d < 0) throw std::logic_error("std::logic_error: discriminant negative in ponsas::quadroots not accepted.");
 }
 
 }
