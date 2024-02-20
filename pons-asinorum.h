@@ -11,14 +11,21 @@ const double PI = 3.141592653589793;
 
 typedef double (*svfunc)(double);
 
-template <typename T>
-T abs(T x);
+template <typename T> T sign(T x);
+template <typename T> T abs(T x);
 int factorial(int n);
 double newton_sqroot(double a, double x, double tolerance = 1.0E-10);
+void quadroots(double a, double b, double c, double &x1, double &x2);
 
 // function implementations
 
 // templated absolute value function or |x|
+template <typename T>
+T sign(T x) {
+    x < 0 ? return -1 : return 1;
+}
+
+
 template <typename T>
 T abs(T x) {
     if (x < 0) return -x;
