@@ -15,6 +15,7 @@ template <typename T> T sign(T x);
 template <typename T> T abs(T x);
 int factorial(int n);
 double newton_sqroot(double a, double x, double tolerance = 1.0E-10);
+void quadroots(double a, double b, double c, double &x1, double &x2);
 
 // function implementations
 
