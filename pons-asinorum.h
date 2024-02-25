@@ -55,6 +55,11 @@ void quadroots(double a, double b, double c, double &x1, double &x2) {
 
     double d = b*b - 4.0*a*c;
     if (d < 0) throw std::logic_error("std::logic_error: discriminant negative in ponsas::quadroots not accepted.");
+
+    double s = -(b + sqrt(d) * sign(b)) / 2;
+
+    x1 = s/a;
+    x2 = c/s;
 }
 
 }
