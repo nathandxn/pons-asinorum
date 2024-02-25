@@ -8,6 +8,7 @@
 namespace ponsas {
 
 const double PI = 3.141592653589793;
+const double GOLDMEAN = 0.618034;
 
 typedef double (*svfunc)(double);
 
